@@ -90,10 +90,13 @@ hero {
   height: 252px;
   flex-shrink: 0;
   font-family: "Fjalla One", sans-serif;
+  
 
   .name,
   .description {
     font-size: 66px;
+    margin: 21px 0;
+    
   }
 
   .hello {
@@ -103,5 +106,13 @@ hero {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top: 105px;
+    
+  }
+
+  .intro {
+    width: 555px;
+    height: 135px;
+    flex-shrink: 0;
   }
 }
