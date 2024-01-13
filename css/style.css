@@ -117,6 +117,7 @@ hero {
 hero .name,
 hero .description {
   font-size: 66px;
+  margin: 21px 0;
 }
 hero .hello {
   color: #64ffda;
@@ -125,4 +126,10 @@ hero .hello {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-top: 105px;
+}
+hero .intro {
+  width: 555px;
+  height: 135px;
+  flex-shrink: 0;
 }/*# sourceMappingURL=style.css.map */
