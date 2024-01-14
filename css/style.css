@@ -63,73 +63,70 @@ table {
 }
 
 body {
-  width: 1141px;
-  height: 5690px;
-  flex-shrink: 0;
+  width: 99.9%;
+  background-color: rgb(17, 34, 64);
 }
 
 nav {
-  width: 1440px;
-  height: 66px;
-  flex-shrink: 0;
+  width: 100%;
   border: 0.5px solid #64ffda;
   display: flex;
+  margin-bottom: 6.5rem;
 }
-nav .name {
+nav .preheader {
   display: flex;
-  width: 149px;
-  height: 66px;
-  flex-shrink: 0;
-  color: #64ffda;
-  font-family: Fira Code;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px; /* 83.333% */
-  margin-left: 5px;
-  margin-top: 5px;
-}
-nav .list {
-  display: flex;
-  width: 1246px;
-  height: 66px;
+  width: 100%;
   justify-content: flex-end;
-  flex-shrink: 0;
-  color: #000000;
+  color: #ffffff;
   font-family: Fira Code;
-  font-size: 13px;
+  font-size: 0.75rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  margin-top: 10px;
+  line-height: 1.5rem;
+  margin: 0.75rem;
 }
 
 span {
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 
-hero {
-  width: 703px;
-  height: 252px;
-  flex-shrink: 0;
+.header {
+  width: 44rem;
+  height: 14.5rem;
   font-family: "Fjalla One", sans-serif;
 }
-hero .name,
-hero .description {
-  font-size: 66px;
-  margin: 21px 0;
+.header .header__heading--bright,
+.header .header__heading--dark {
+  font-size: 4rem;
+  width: 100%;
+  margin-left: 10rem;
+  margin-top: 0.25rem;
 }
-hero .hello {
-  color: #64ffda;
-  font-family: Fira Code;
-  font-size: 16px;
+.header .header__heading--bright {
+  display: flex;
+  color: rgb(204, 214, 246);
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  margin-top: 105px;
 }
-hero .intro {
-  width: 555px;
-  height: 135px;
-  flex-shrink: 0;
+.header .header__heading--dark {
+  color: rgb(136, 146, 192);
+}
+
+.subheader {
+  width: 33.25rem;
+  margin-left: 10rem;
+  font-family: "Fjalla One", sans-serif;
+  line-height: 1.25rem;
+  color: #ffffff;
+}
+
+.resume-btn {
+  font-size: 0.75rem;
+  color: #64ffda;
+  padding: 1rem 1.5rem;
+  background: none;
+  margin-left: 10rem;
+  margin-top: 1.5rem;
+  font-family: Fira Code;
+  border-radius: 5px;
+  border: 0.5px solid #64ffda;
 }/*# sourceMappingURL=style.css.map */

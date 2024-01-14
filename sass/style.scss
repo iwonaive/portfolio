@@ -1,118 +1,77 @@
 @use "fonts";
-@use "mixins";
+@use "mixins" as *;
 @use "reset";
-@use "variables";
+@use "variables" as *;
+// trik z * wczytałam na jakiejś stronce, działa, ale czy jest ok?
 
 body {
-  width: 1141px;
-  height: 5690px;
-  flex-shrink: 0;
+  // width: 71.5rem;
+  width: 99.9%;
+  // mogę dać taki width?
+  // height: 5690px; to dane skopiowane z figmy
+  // flex-shrink: 0;
+  background-color: $dark_background;
 }
-
 nav {
-  width: 1440px;
-  height: 66px;
-  flex-shrink: 0;
-  border: 0.5px solid #64ffda;
+  width: 100%;
+  border: 0.5px solid $light_blue;
   display: flex;
+  margin-bottom: 6.5rem;
 
-  .name {
+  .preheader {
     display: flex;
-    width: 149px;
-    height: 66px;
-    // flex-direction: column;
-    // justify-content: center;
-    flex-shrink: 0;
-    color: #64ffda;
-    // text-align: center;
-    font-family: Fira Code;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px; /* 83.333% */
-    margin-left: 5px;
-    margin-top: 5px;
-  }
-  .list {
-    display: flex;
-    // flex-wrap: wrap;
-    width: 1246px;
-    height: 66px;
+    width: 100%;
+    // height: 66px;
     //   flex-direction: column;
     justify-content: flex-end;
-    flex-shrink: 0;
-    color: #000000; //docelowo white//
+    color: $white;
     font-family: Fira Code;
-    font-size: 13px;
+    font-size: 0.75rem;
     font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    margin-top: 10px;
+    line-height: 1.5rem;
+    margin: 0.75rem;
   }
 }
-
 span {
-  padding: 0 15px;
+  padding: 0 1rem;
 }
 
-//   .list {
-//     display: flex;
-//     width: 546px;
-//     height: 66px;
-//     flex-direction: column-reverse;
-//     justify-content: center;
-//     flex-shrink: 0;
-//     color: #000000; //docelowo white//
-//     font-family: Fira Code;
-//     font-size: 13px;
-//     font-style: normal;
-//     font-weight: 400;
-//     line-height: 25px;
-//   }
-
-// div {
-//   display: flex;
-//   width: 546px;
-//   height: 66px;
-//   flex-direction: column;
-//   justify-content: center;
-//   flex-shrink: 0;
-//   color: #000000; //docelowo white//
-//   font-family: Fira Code;
-//   font-size: 13px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 25px;
-// }
-
-hero {
-  width: 703px;
-  height: 252px;
-  flex-shrink: 0;
+.header {
+  width: 44rem;
+  height: 14.5rem;
   font-family: "Fjalla One", sans-serif;
-  
 
-  .name,
-  .description {
-    font-size: 66px;
-    margin: 21px 0;
-    
+  .header__heading--bright,
+  .header__heading--dark {
+    font-size: 4rem;
+    width: 100%;
+    margin-left: 10rem;
+    margin-top: 0.25rem;
   }
 
-  .hello {
-    color: #64ffda;
-    font-family: Fira Code;
-    font-size: 16px;
+  .header__heading--bright {
+    display: flex;
+
+    // height: 66px;
+    color: $heading_bright;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    margin-top: 105px;
-    
+    // line-height: 3.5rem;
   }
 
-  .intro {
-    width: 555px;
-    height: 135px;
-    flex-shrink: 0;
+  .header__heading--dark {
+    color: $heading_dark;
+    // mam wątpliwość, czy nie komplikuje sobie w ten sposób życia - nazwa z podłogą a wcześniej --
   }
+}
+.subheader {
+  width: 33.25rem;
+  margin-left: 10rem;
+  font-family: "Fjalla One", sans-serif;
+  line-height: 1.25rem;
+  color: $white;
+}
+
+.resume-btn {
+  @include blue-btn;
 }
