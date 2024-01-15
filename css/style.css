@@ -85,7 +85,7 @@ body {
 }
 
 .nav__link__content--blue {
-  font-family: "Fira Code", monospace;
+  font-family: Fira Code;
   color: #64ffda;
 }
 
