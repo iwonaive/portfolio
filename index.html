@@ -4,37 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iwona's Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-
-      <nav>
-      <div class="preheader">
-        <span>01. à propos</span>
-        <span>02. experience</span>
-        <span>03. projets </span>
-        <span>04. contact</span>
-      </div>
+    <nav class="nav">
+      <a class="nav__link"
+        ><span class="nav__link__content--blue">01.</span> à propos</a
+      >
+      <a class="nav__link"
+        ><span class="nav__link__content--blue">02.</span> experience</a
+      >
+      <a class="nav__link"
+        ><span class="nav__link__content--blue">03.</span> projets</a
+      >
+      <a class="nav__link"
+        ><span class="nav__link__content--blue">04.</span> contact</a
+      >
     </nav>
 
-    <header class="header">
-        <h1 class="header__heading--bright">Iwona Szymaniak</h>
-        <h1 class="header__heading--dark">I'm a frontend web developer</h>
-    </header>
-
-      <div class="subheader">
-        I'm an entry-level frontend web developer. Doing my best to become a
-        professional developer. My dream is to find a job and gain some
-        commercial experience working with real team. When I'm not coding you
-        can find me at the gym. Coffee lover, kettlebell lover and a big fan of
-        Neapolitan pizza.
+    <section class="main">
+      <div class="main__container">
+        <h1 class="main__container__heading--bright">Iwona Szymaniak</h1>
+        <h1 class="main__container__heading--dark">
+          I'm a frontend web developer
+        </h1>
+        <div class="main__container__subheader">
+          I'm an entry-level frontend web developer. Doing my best to become a
+          professional developer. My dream is to find a job and gain some
+          commercial experience working with real team. When I'm not coding you
+          can find me at the gym. Coffee lover, kettlebell lover and a big fan
+          of Neapolitan pizza.
+        </div>
+        <button class="main__container__btn">Download my resume</button>
       </div>
-
-      
-    <button class="resume-btn">Download my resume</button>
-    <!-- mam problem z BEM, niby rozumiem a jednak nie do końca i np nie wiem czy ten btn może sobie tak wisieć jako osobny byt -->
-
-
+    </section>
 
     <about>
       <h2>About</h2>
@@ -43,13 +46,11 @@
       <p>Also in 2023 I had the opportunity to participate in Dare IT program, which is ment for woman who want to join IT. Dare IT Mentoring is a 4-month program where I work with my mentor on my Frontend Developer skills. In addition to 1:1 sessions with a mentor, the Program offers: HR consultations, thematic webinars, networking meetings, all in a community of almost 300 people: mentors, HR consultants, Program Partners and other mentees. Besides that I also work on my portfolio and together with real team we create a website (coming soon). Nearly 1,000 candidates applied for the 120 spots - I'm very happy and thankful for this opportinity. </p> -->
     </about>
 
-
     <experience>
       <h2>Experience</h2>
       <!-- 1. Dare IT program - opiszę tu portfolio oraz projekt z opcją coming soon
       2. Postgraduate - tu też opiszę projekty ze studiów -->
     </experience>
-
 
     <projects>
       <h2>My projects</h2>
@@ -59,12 +60,10 @@
       karty  -->
     </projects>
 
-
     <contact>
       <h2>Contact</h2>
     </contact>
 
-    
     <footer></footer>
   </body>
 </html>

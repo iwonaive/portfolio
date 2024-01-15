@@ -10,3 +10,7 @@
   border: 0.5px solid #64ffda;
 }
 
+@mixin blue-text {
+    font-family: "Fira Code", monospace;
+    color: #64ffda;
+}
