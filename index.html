@@ -4,44 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iwona's Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav>
-        <div class="name">Iwona</div>
-        <div class="list">
-            <span>01. à propos</span> 
-            <span>02. experience</span> 
-            <span>03. projects </span>
-            <span>04. contact</span>
-            
-        </div>
+    <nav class="nav">
+      <a class="nav__link"
+        ><span class="nav__link__content--blue">01.</span> à propos</a
+      >
+      <a class="nav__link"
+        ><span class="nav__link__content--blue">02.</span> experience</a
+      >
+      <a class="nav__link"
+        ><span class="nav__link__content--blue">03.</span> projets</a
+      >
+      <a class="nav__link"
+        ><span class="nav__link__content--blue">04.</span> contact</a
+      >
     </nav>
 
-    <hero>
-      <p class="hello">Hello, my name is</p>
-      <h1>
-        <p class="name">Iwona Szymaniak</p>
-          <p class="description">I'm a frontend web developer</p>
+    <section class="main">
+      <div class="main__container">
+        <h1 class="main__container__heading--bright">Iwona Szymaniak</h1>
+        <h1 class="main__container__heading--dark">
+          I'm a frontend web developer
         </h1>
-        <div class="intro">I’m a entry-level frontend web developer. Doing my best to become a professional developer. My dream is to find a job and gain some commercial experience working with real team. When I'm not coding you can find me at the gym. Coffee lover ☕, kettlebell lover 💪 and a big fan of pizza 🍕. </div>
-    </hero>
+        <div class="main__container__subheader">
+          I'm an entry-level frontend web developer. Doing my best to become a
+          professional developer. My dream is to find a job and gain some
+          commercial experience working with real team. When I'm not coding you
+          can find me at the gym. Coffee lover, kettlebell lover and a big fan
+          of Neapolitan pizza.
+        </div>
+        <button class="main__container__btn">Download my resume</button>
+      </div>
+    </section>
 
-    <about>
-      <h2>About</h2>
-    </about>
-<experience>
-    <h2>Experience</h2>
-</experience>
+    <section class="about">
+      <div class="about__container">
+        <h2 class="about__container__heading">About</h2>
+        <div class="about_container__description">
+          <!-- <p>Hello, I'm Iwona and I wanna be frontend developer. </p>
+      <p>In 2023 I finished postgraduate studies - Frontend web development. Before that I was learning by myself. My journey to become a developer started in 2022.</p>
+      <p>Also in 2023 I had the opportunity to participate in Dare IT program, which is ment for woman who want to join IT. Dare IT Mentoring is a 4-month program where I work with my mentor on my Frontend Developer skills. In addition to 1:1 sessions with a mentor, the Program offers: HR consultations, thematic webinars, networking meetings, all in a community of almost 300 people: mentors, HR consultants, Program Partners and other mentees. Besides that I also work on my portfolio and together with real team we create a website (coming soon). Nearly 1,000 candidates applied for the 120 spots - I'm very happy and thankful for this opportinity. </p> -->
+        </div>
+      </div>
+    </section>
 
-    <projects>
+    <section class="experience">
+      <h2>Experience</h2>
+      <!-- 1. Dare IT program - opiszę tu portfolio oraz projekt z opcją coming soon
+      2. Postgraduate - tu też opiszę projekty ze studiów -->
+    </section>
+
+    <section class="projects">
       <h2>My projects</h2>
-    </projects>
+      <!-- 1. Dare IT project - coming soon
+      2. Projekt ze studiów 
+      3. Personal website - this project 
+      karty  -->
+    </section>
 
-    <contact>
+    <section class="contact">
       <h2>Contact</h2>
-    </contact>
+    </section>
 
-    <footer></footer>
+    <footer class="footer"></footer>
   </body>
 </html>

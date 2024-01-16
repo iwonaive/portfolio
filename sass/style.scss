@@ -1,118 +1,68 @@
 @use "fonts";
-@use "mixins";
+@use "mixins" as m;
 @use "reset";
-@use "variables";
+@use "variables" as v;
 
 body {
-  width: 1141px;
-  height: 5690px;
-  flex-shrink: 0;
+  width: 100%;
+  background-color: v.$dark-blue;
 }
 
-nav {
-  width: 1440px;
-  height: 66px;
-  flex-shrink: 0;
-  border: 0.5px solid #64ffda;
+.nav {
+  width: 100%;
+  border: 0.5px solid v.$light-blue;
   display: flex;
-
-  .name {
-    display: flex;
-    width: 149px;
-    height: 66px;
-    // flex-direction: column;
-    // justify-content: center;
-    flex-shrink: 0;
-    color: #64ffda;
-    // text-align: center;
-    font-family: Fira Code;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px; /* 83.333% */
-    margin-left: 5px;
-    margin-top: 5px;
-  }
-  .list {
-    display: flex;
-    // flex-wrap: wrap;
-    width: 1246px;
-    height: 66px;
-    //   flex-direction: column;
-    justify-content: flex-end;
-    flex-shrink: 0;
-    color: #000000; //docelowo white//
-    font-family: Fira Code;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    margin-top: 10px;
-  }
+  margin-bottom: 6.5rem;
+  display: flex;
+  justify-content: flex-end;
+  color: v.$white;
+  font-family: v.$font-primary;
+  font-size: 0.75rem;
+  line-height: 3.5rem;
 }
 
-span {
-  padding: 0 15px;
+.nav__link {
+  padding: 0 1rem;
 }
 
-//   .list {
-//     display: flex;
-//     width: 546px;
-//     height: 66px;
-//     flex-direction: column-reverse;
-//     justify-content: center;
-//     flex-shrink: 0;
-//     color: #000000; //docelowo white//
-//     font-family: Fira Code;
-//     font-size: 13px;
-//     font-style: normal;
-//     font-weight: 400;
-//     line-height: 25px;
-//   }
+.nav__link__content--blue {
+  @include m.blue-text;
+}
 
-// div {
-//   display: flex;
-//   width: 546px;
-//   height: 66px;
-//   flex-direction: column;
-//   justify-content: center;
-//   flex-shrink: 0;
-//   color: #000000; //docelowo white//
-//   font-family: Fira Code;
-//   font-size: 13px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 25px;
-// }
+.main__container {
+  width: 44rem;
+  padding-bottom: 2.5rem;
+  font-family: v.$font-secondary;
 
-hero {
-  width: 703px;
-  height: 252px;
-  flex-shrink: 0;
-  font-family: "Fjalla One", sans-serif;
-  
-
-  .name,
-  .description {
-    font-size: 66px;
-    margin: 21px 0;
-    
+  .main__container__heading--bright,
+  .main__container__heading--dark {
+    font-size: 4rem;
+    width: 100%;
+    margin-left: 10rem;
+    margin-top: 0.25rem;
   }
 
-  .hello {
-    color: #64ffda;
-    font-family: Fira Code;
-    font-size: 16px;
+  .main__container__heading--bright {
+    display: flex;
+    color: v.$light-heather;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    margin-top: 105px;
-    
   }
 
-  .intro {
-    width: 555px;
-    height: 135px;
-    flex-shrink: 0;
+  .main__container__heading--dark {
+    color: v.$dark-heather;
   }
+}
+.main__container__subheader {
+  width: 33.25rem;
+  margin-left: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: v.$font-secondary;
+  line-height: 1.25rem;
+  color: v.$white;
+}
+
+.main__container__btn {
+  @include m.blue-btn;
 }

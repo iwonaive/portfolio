@@ -63,73 +63,72 @@ table {
 }
 
 body {
-  width: 1141px;
-  height: 5690px;
-  flex-shrink: 0;
+  width: 100%;
+  background-color: rgb(17, 34, 64);
 }
 
-nav {
-  width: 1440px;
-  height: 66px;
-  flex-shrink: 0;
+.nav {
+  width: 100%;
   border: 0.5px solid #64ffda;
   display: flex;
-}
-nav .name {
+  margin-bottom: 6.5rem;
   display: flex;
-  width: 149px;
-  height: 66px;
-  flex-shrink: 0;
-  color: #64ffda;
-  font-family: Fira Code;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px; /* 83.333% */
-  margin-left: 5px;
-  margin-top: 5px;
-}
-nav .list {
-  display: flex;
-  width: 1246px;
-  height: 66px;
   justify-content: flex-end;
-  flex-shrink: 0;
-  color: #000000;
+  color: #ffffff;
   font-family: Fira Code;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  margin-top: 10px;
+  font-size: 0.75rem;
+  line-height: 3.5rem;
 }
 
-span {
-  padding: 0 15px;
+.nav__link {
+  padding: 0 1rem;
 }
 
-hero {
-  width: 703px;
-  height: 252px;
-  flex-shrink: 0;
-  font-family: "Fjalla One", sans-serif;
-}
-hero .name,
-hero .description {
-  font-size: 66px;
-  margin: 21px 0;
-}
-hero .hello {
+.nav__link__content--blue {
+  font-family: Fira Code;
   color: #64ffda;
-  font-family: Fira Code;
-  font-size: 16px;
+}
+
+.main__container {
+  width: 44rem;
+  padding-bottom: 2.5rem;
+  font-family: Fjalla One;
+}
+.main__container .main__container__heading--bright,
+.main__container .main__container__heading--dark {
+  font-size: 4rem;
+  width: 100%;
+  margin-left: 10rem;
+  margin-top: 0.25rem;
+}
+.main__container .main__container__heading--bright {
+  display: flex;
+  color: rgb(204, 214, 246);
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  margin-top: 105px;
 }
-hero .intro {
-  width: 555px;
-  height: 135px;
-  flex-shrink: 0;
+.main__container .main__container__heading--dark {
+  color: rgb(136, 146, 192);
+}
+
+.main__container__subheader {
+  width: 33.25rem;
+  margin-left: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: Fjalla One;
+  line-height: 1.25rem;
+  color: #ffffff;
+}
+
+.main__container__btn {
+  font-size: 0.75rem;
+  color: #64ffda;
+  padding: 1rem 1.5rem;
+  background: none;
+  margin-left: 10rem;
+  margin-top: 1.5rem;
+  font-family: Fira Code;
+  border-radius: 5px;
+  border: 0.5px solid #64ffda;
 }/*# sourceMappingURL=style.css.map */
