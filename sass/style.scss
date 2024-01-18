@@ -38,8 +38,7 @@ body {
   .main__container__heading--dark {
     font-size: 4rem;
     width: 100%;
-    margin-left: 10rem;
-    margin-top: 0.25rem;
+    margin: 0.25rem 0 0 10rem;
   }
 
   .main__container__heading--bright {
@@ -55,9 +54,7 @@ body {
 }
 .main__container__subheader {
   width: 33.25rem;
-  margin-left: 10rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0 2rem 10rem;
   font-family: v.$font-secondary;
   line-height: 1.25rem;
   color: v.$white;
@@ -65,4 +62,54 @@ body {
 
 .main__container__btn {
   @include m.blue-btn;
+}
+
+.about {
+  font-family: v.$font-primary;
+  color: v.$white;
+  margin: 7rem 0 0 10rem;
+  font-size: 1.25rem;
+
+  .section__container__text--blue {
+    @include m.blue-text;
+  }
+
+  &__container {
+    color: v.$white;
+    font-size: 0.75rem;
+    width: 35rem;
+    margin: 3rem 10rem 0 0;
+    line-height: 1.25rem;
+    display: inline-block;
+  }
+
+  &__img {
+    width: 13rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    -webkit-box-shadow: 8px 8px 0px 0px rgba(100, 255, 218, 1);
+    -moz-box-shadow: 8px 8px 0px 0px rgba(100, 255, 218, 1);
+    box-shadow: 8px 8px 0px 0px rgba(100, 255, 218, 1);
+  }
+}
+
+.section {
+  &__heading {
+    display: flex;
+    width: 100%;
+    &__text {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed v.$light-blue;
+        margin-left: 1rem;
+      }
+    }
+  }
 }

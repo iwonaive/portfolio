@@ -98,8 +98,7 @@ body {
 .main__container .main__container__heading--dark {
   font-size: 4rem;
   width: 100%;
-  margin-left: 10rem;
-  margin-top: 0.25rem;
+  margin: 0.25rem 0 0 10rem;
 }
 .main__container .main__container__heading--bright {
   display: flex;
@@ -113,9 +112,7 @@ body {
 
 .main__container__subheader {
   width: 33.25rem;
-  margin-left: 10rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0 2rem 10rem;
   font-family: Fjalla One;
   line-height: 1.25rem;
   color: #ffffff;
@@ -131,4 +128,49 @@ body {
   font-family: Fira Code;
   border-radius: 5px;
   border: 0.5px solid #64ffda;
+}
+
+.about {
+  font-family: Fira Code;
+  color: #ffffff;
+  margin: 7rem 0 0 10rem;
+  font-size: 1.25rem;
+}
+.about .section__container__text--blue {
+  font-family: Fira Code;
+  color: #64ffda;
+}
+.about__container {
+  color: #ffffff;
+  font-size: 0.75rem;
+  width: 35rem;
+  margin: 3rem 10rem 0 0;
+  line-height: 1.25rem;
+  display: inline-block;
+}
+.about__img {
+  width: 13rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
+  -moz-box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
+  box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
+}
+
+.section__heading {
+  display: flex;
+  width: 100%;
+}
+.section__heading__text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.section__heading__text::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #64ffda;
+  margin-left: 1rem;
 }/*# sourceMappingURL=style.css.map */
