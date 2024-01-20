@@ -19,14 +19,14 @@ body {
   font-family: v.$font-primary;
   font-size: 0.75rem;
   line-height: 3.5rem;
-}
 
-.nav__link {
-  padding: 0 1rem;
-}
+  &__link {
+    padding: 0 1rem;
 
-.nav__link__content--blue {
-  @include m.blue-text;
+    &__content--blue {
+      @include m.blue-text;
+    }
+  }
 }
 
 .main__container {
@@ -34,34 +34,36 @@ body {
   padding-bottom: 2.5rem;
   font-family: v.$font-secondary;
 
-  .main__container__heading--bright,
-  .main__container__heading--dark {
-    font-size: 4rem;
-    width: 100%;
-    margin: 0.25rem 0 0 10rem;
+  &__heading {
+    &--bright,
+    &--dark {
+      font-size: 4rem;
+      width: 100%;
+      margin: 0.25rem 0 0 10rem;
+    }
+
+    &--bright {
+      display: flex;
+      color: v.$light-heather;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    &--dark {
+      color: v.$dark-heather;
+    }
   }
 
-  .main__container__heading--bright {
-    display: flex;
-    color: v.$light-heather;
-    font-style: normal;
-    font-weight: 400;
+  &__subheader {
+    width: 33.25rem;
+    margin: 2rem 0 2rem 10rem;
+    font-family: v.$font-secondary;
+    line-height: 1.25rem;
+    color: v.$white;
   }
-
-  .main__container__heading--dark {
-    color: v.$dark-heather;
+  .main__container__btn {
+    @include m.blue-btn;
   }
-}
-.main__container__subheader {
-  width: 33.25rem;
-  margin: 2rem 0 2rem 10rem;
-  font-family: v.$font-secondary;
-  line-height: 1.25rem;
-  color: v.$white;
-}
-
-.main__container__btn {
-  @include m.blue-btn;
 }
 
 .about {
@@ -70,15 +72,15 @@ body {
   margin: 7rem 0 0 10rem;
   font-size: 1.25rem;
 
-  .section__container__text--blue {
-    @include m.blue-text;
-  }
+  // .section__container__text--blue {
+  //   @include m.blue-text;
+  // }
 
   &__container {
     color: v.$white;
     font-size: 0.75rem;
-    width: 35rem;
-    margin: 3rem 10rem 0 0;
+    width: 40rem;
+    margin: 3rem 15rem 0 0;
     line-height: 1.25rem;
     display: inline-block;
   }
@@ -86,7 +88,7 @@ body {
   &__img {
     width: 13rem;
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     -webkit-box-shadow: 8px 8px 0px 0px rgba(100, 255, 218, 1);
     -moz-box-shadow: 8px 8px 0px 0px rgba(100, 255, 218, 1);
     box-shadow: 8px 8px 0px 0px rgba(100, 255, 218, 1);
@@ -111,5 +113,8 @@ body {
         margin-left: 1rem;
       }
     }
+  }
+  &__container__text--blue {
+    @include m.blue-text;
   }
 }
