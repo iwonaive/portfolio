@@ -72,10 +72,6 @@ body {
   margin: 7rem 0 0 10rem;
   font-size: 1.25rem;
 
-  // .section__container__text--blue {
-  //   @include m.blue-text;
-  // }
-
   &__container {
     color: v.$white;
     font-size: 0.75rem;
@@ -116,5 +112,62 @@ body {
   }
   &__container__text--blue {
     @include m.blue-text;
+  }
+}
+
+.experience {
+  font-family: v.$font-primary;
+  color: v.$white;
+  margin: 7rem 0 20rem 10rem;
+  font-size: 1.25rem;
+  position: relative;
+
+  &__description {
+    margin-left: 4rem;
+  }
+  &__date {
+    color: v.$light-gray;
+    margin: 0 0 1rem 2.5rem;
+  }
+  &__content {
+    display: inline;
+    font-size: 1rem;
+
+    &::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      transform: rotate(-45deg);
+      border: 4px solid v.$light-blue;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__container {
+    color: v.$white;
+    font-size: 0.75rem;
+    width: 40rem;
+    margin: 3rem 15rem 0 0;
+    line-height: 1.25rem;
+    display: inline-block;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 9rem;
+    border-left: 1px dashed v.$light-blue;
+    margin: 7rem 0 0 0.75rem;
+    position: absolute;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 8rem;
+    border-left: 1px dashed v.$light-blue;
+    margin: -6.5rem 0 0 0.75rem;
+    position: absolute;
   }
 }
