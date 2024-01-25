@@ -246,6 +246,7 @@ a:focus {
   border-radius: 5px;
   background: rgb(17, 34, 64);
   text-decoration: none;
+  cursor: pointer;
 }
 .card__icon-earth {
   margin: 1.5rem 0 2rem 1.5rem;
@@ -268,7 +269,6 @@ a:focus {
   margin: 6rem 0 0 1rem;
 }
 .card:hover {
-  cursor: pointer;
   filter: brightness(1.4);
 }
 

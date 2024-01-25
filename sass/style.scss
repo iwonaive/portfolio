@@ -200,6 +200,7 @@ a:focus {
   border-radius: 5px;
   background: v.$deep-blue;
   text-decoration: none;
+  cursor: pointer;
 
   &__icon-earth {
     margin: 1.5rem 0 2rem 1.5rem;
@@ -226,7 +227,7 @@ a:focus {
   }
 
   &:hover {
-    cursor: pointer;
+    
     filter: brightness(1.4);
   }
 }
