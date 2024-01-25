@@ -64,9 +64,17 @@ table {
 
 body {
   width: 100%;
-  background-color: rgb(17, 34, 64);
+  background-color: rgb(10, 25, 48);
   font-family: Fira Code;
   color: rgb(255, 255, 255);
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
 }
 
 .nav {
@@ -126,7 +134,7 @@ body {
 }
 .main__container .main__container__btn:hover {
   cursor: pointer;
-  background-color: rgb(28, 55, 102);
+  filter: brightness(2.8);
 }
 
 .about {
@@ -177,18 +185,18 @@ body {
   font-size: 1.25rem;
   position: relative;
 }
-.experience__description {
+.experience__container__description {
   margin-left: 4rem;
 }
-.experience__date {
+.experience__container__date {
   color: rgba(255, 240, 240, 0.6);
   margin: 0 0 1rem 2.5rem;
 }
-.experience__content {
+.experience__container__content {
   display: inline;
   font-size: 1rem;
 }
-.experience__content::before {
+.experience__container__content::before {
   content: "";
   width: 1rem;
   height: 1rem;
@@ -236,40 +244,32 @@ body {
   width: 25%;
   height: 20rem;
   border-radius: 5px;
-  background: rgb(28, 55, 102);
+  background: rgb(17, 34, 64);
   text-decoration: none;
 }
 .card__icon-earth {
   margin: 1.5rem 0 2rem 1.5rem;
 }
-.card__title {
+.card__body__title {
   font-size: 1.25rem;
   margin-left: 1rem;
   font-weight: 700;
   color: rgb(204, 214, 246);
 }
-.card__content {
+.card__body__content {
   font-size: 1rem;
   margin: 1rem;
   line-height: 1.25rem;
   color: rgb(168, 178, 209);
 }
-.card__footer {
+.card__body__footer {
   color: rgb(196, 196, 196);
   font-size: 0.75rem;
   margin: 6rem 0 0 1rem;
 }
 .card:hover {
   cursor: pointer;
-  background: rgb(26, 42, 78);
-}
-
-a,
-a:hover,
-a:active,
-a:visited,
-a:focus {
-  text-decoration: none;
+  filter: brightness(1.4);
 }
 
 .footer {
@@ -277,12 +277,12 @@ a:focus {
   font-size: 1.25rem;
   text-align: center;
 }
-.footer__content {
+.footer__container__content {
   margin-top: 4rem;
   margin: 4rem 0 4rem 0;
   font-size: 1rem;
 }
-.footer__btn {
+.footer .a-linkedin {
   font-size: 0.75rem;
   color: rgb(100, 255, 218);
   padding: 1rem 1.5rem;
@@ -294,7 +294,6 @@ a:focus {
   border: 0.5px solid rgb(100, 255, 218);
   margin: 0 auto;
 }
-.footer__btn:hover {
-  cursor: pointer;
-  background-color: rgb(28, 55, 102);
+.footer .a-linkedin:hover {
+  filter: brightness(2.8);
 }/*# sourceMappingURL=style.css.map */

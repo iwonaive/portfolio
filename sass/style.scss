@@ -10,6 +10,14 @@ body {
   color: v.$white;
 }
 
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
 .nav {
   width: 100%;
   border: 0.5px solid v.$light-blue;
@@ -61,12 +69,13 @@ body {
     line-height: 1.25rem;
     color: v.$white;
   }
+
   .main__container__btn {
     @include m.blue-btn;
 
     &:hover {
       cursor: pointer;
-      background-color: v.$deep-blue;
+      filter: brightness(2.8);
     }
   }
 }
@@ -124,14 +133,14 @@ body {
   font-size: 1.25rem;
   position: relative;
 
-  &__description {
+  &__container__description {
     margin-left: 4rem;
   }
-  &__date {
+  &__container__date {
     color: v.$light-gray;
     margin: 0 0 1rem 2.5rem;
   }
-  &__content {
+  &__container__content {
     display: inline;
     font-size: 1rem;
 
@@ -196,21 +205,21 @@ body {
     margin: 1.5rem 0 2rem 1.5rem;
   }
 
-  &__title {
+  &__body__title {
     font-size: 1.25rem;
     margin-left: 1rem;
     font-weight: 700;
     color: v.$light-heather;
   }
 
-  &__content {
+  &__body__content {
     font-size: 1rem;
     margin: 1rem;
     line-height: 1.25rem;
     color: v.$greyish-blue;
   }
 
-  &__footer {
+  &__body__footer {
     color: v.$lighter-gray;
     font-size: 0.75rem;
     margin: 6rem 0 0 1rem;
@@ -218,16 +227,8 @@ body {
 
   &:hover {
     cursor: pointer;
-    background: v.$deeper-blue;
+    filter: brightness(1.4);
   }
-}
-
-a,
-a:hover,
-a:active,
-a:visited,
-a:focus {
-  text-decoration: none;
 }
 
 .footer {
@@ -235,19 +236,18 @@ a:focus {
   font-size: 1.25rem;
   text-align: center;
 
-  &__content {
+  &__container__content {
     margin-top: 4rem;
     margin: 4rem 0 4rem 0;
     font-size: 1rem;
   }
 
-  &__btn {
+  .a-linkedin {
     @include m.blue-btn;
     margin: 0 auto;
 
     &:hover {
-      cursor: pointer;
-      background-color: v.$deep-blue;
+      filter: brightness(2.8);
     }
   }
 }
