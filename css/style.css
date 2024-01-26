@@ -64,18 +64,26 @@ table {
 
 body {
   width: 100%;
-  background-color: rgb(17, 34, 64);
+  background-color: rgb(10, 25, 48);
+  font-family: Fira Code;
+  color: rgb(255, 255, 255);
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
 }
 
 .nav {
   width: 100%;
-  border: 0.5px solid #64ffda;
+  border: 0.5px solid rgb(100, 255, 218);
   display: flex;
   margin-bottom: 6.5rem;
   display: flex;
   justify-content: flex-end;
-  color: #ffffff;
-  font-family: Fira Code;
   font-size: 0.75rem;
   line-height: 3.5rem;
 }
@@ -84,7 +92,7 @@ body {
 }
 .nav__link__content--blue {
   font-family: Fira Code;
-  color: #64ffda;
+  color: rgb(100, 255, 218);
 }
 
 .main__container {
@@ -111,28 +119,30 @@ body {
   margin: 2rem 0 2rem 10rem;
   font-family: Fjalla One;
   line-height: 1.25rem;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 .main__container .main__container__btn {
   font-size: 0.75rem;
-  color: #64ffda;
+  color: rgb(100, 255, 218);
   padding: 1rem 1.5rem;
   background: none;
   margin-left: 10rem;
   margin-top: 1.5rem;
   font-family: Fira Code;
   border-radius: 5px;
-  border: 0.5px solid #64ffda;
+  border: 0.5px solid rgb(100, 255, 218);
+}
+.main__container .main__container__btn:hover {
+  cursor: pointer;
+  filter: brightness(2.8);
 }
 
 .about {
-  font-family: Fira Code;
-  color: #ffffff;
   margin: 7rem 0 0 10rem;
   font-size: 1.25rem;
 }
 .about__container {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-size: 0.75rem;
   width: 40rem;
   margin: 3rem 15rem 0 0;
@@ -162,43 +172,41 @@ body {
   display: block;
   width: 100%;
   height: 1px;
-  border-bottom: 1px dashed #64ffda;
+  border-bottom: 1px dashed rgb(100, 255, 218);
   margin-left: 1rem;
 }
 .section__container__text--blue {
   font-family: Fira Code;
-  color: #64ffda;
+  color: rgb(100, 255, 218);
 }
 
 .experience {
-  font-family: Fira Code;
-  color: #ffffff;
-  margin: 7rem 0 20rem 10rem;
+  margin: 7rem 0 9rem 10rem;
   font-size: 1.25rem;
   position: relative;
 }
-.experience__description {
+.experience__container__description {
   margin-left: 4rem;
 }
-.experience__date {
+.experience__container__date {
   color: rgba(255, 240, 240, 0.6);
   margin: 0 0 1rem 2.5rem;
 }
-.experience__content {
+.experience__container__content {
   display: inline;
   font-size: 1rem;
 }
-.experience__content::before {
+.experience__container__content::before {
   content: "";
   width: 1rem;
   height: 1rem;
   transform: rotate(-45deg);
-  border: 4px solid #64ffda;
+  border: 4px solid rgb(100, 255, 218);
   display: inline-block;
   margin-right: 0.5rem;
 }
 .experience__container {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-size: 0.75rem;
   width: 40rem;
   margin: 3rem 15rem 0 0;
@@ -209,7 +217,7 @@ body {
   content: "";
   display: block;
   height: 9rem;
-  border-left: 1px dashed #64ffda;
+  border-left: 1px dashed rgb(100, 255, 218);
   margin: 7rem 0 0 0.75rem;
   position: absolute;
 }
@@ -217,7 +225,75 @@ body {
   content: "";
   display: block;
   height: 8rem;
-  border-left: 1px dashed #64ffda;
+  border-left: 1px dashed rgb(100, 255, 218);
   margin: -6.5rem 0 0 0.75rem;
   position: absolute;
+}
+
+.projects {
+  margin: 7rem 0 0 10rem;
+  font-size: 1.25rem;
+}
+.projects__container {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+.card {
+  width: 25%;
+  height: 20rem;
+  border-radius: 5px;
+  background: rgb(17, 34, 64);
+  text-decoration: none;
+  cursor: pointer;
+}
+.card__icon-earth {
+  margin: 1.5rem 0 2rem 1.5rem;
+}
+.card__body__title {
+  font-size: 1.25rem;
+  margin-left: 1rem;
+  font-weight: 700;
+  color: rgb(204, 214, 246);
+}
+.card__body__content {
+  font-size: 1rem;
+  margin: 1rem;
+  line-height: 1.25rem;
+  color: rgb(168, 178, 209);
+}
+.card__body__footer {
+  color: rgb(196, 196, 196);
+  font-size: 0.75rem;
+  margin: 6rem 0 0 1rem;
+}
+.card:hover {
+  filter: brightness(1.4);
+}
+
+.footer {
+  margin: 7rem 0 3rem 0;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.footer__container__content {
+  margin-top: 4rem;
+  margin: 4rem 0 4rem 0;
+  font-size: 1rem;
+}
+.footer .a-linkedin {
+  font-size: 0.75rem;
+  color: rgb(100, 255, 218);
+  padding: 1rem 1.5rem;
+  background: none;
+  margin-left: 10rem;
+  margin-top: 1.5rem;
+  font-family: Fira Code;
+  border-radius: 5px;
+  border: 0.5px solid rgb(100, 255, 218);
+  margin: 0 auto;
+}
+.footer .a-linkedin:hover {
+  filter: brightness(2.8);
 }/*# sourceMappingURL=style.css.map */

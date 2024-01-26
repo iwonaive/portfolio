@@ -6,6 +6,16 @@
 body {
   width: 100%;
   background-color: v.$dark-blue;
+  font-family: v.$font-primary;
+  color: v.$white;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
 }
 
 .nav {
@@ -15,8 +25,6 @@ body {
   margin-bottom: 6.5rem;
   display: flex;
   justify-content: flex-end;
-  color: v.$white;
-  font-family: v.$font-primary;
   font-size: 0.75rem;
   line-height: 3.5rem;
 
@@ -61,14 +69,18 @@ body {
     line-height: 1.25rem;
     color: v.$white;
   }
+
   .main__container__btn {
     @include m.blue-btn;
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(2.8);
+    }
   }
 }
 
 .about {
-  font-family: v.$font-primary;
-  color: v.$white;
   margin: 7rem 0 0 10rem;
   font-size: 1.25rem;
 
@@ -85,9 +97,9 @@ body {
     width: 13rem;
     display: inline-block;
     margin-bottom: 1rem;
-    -webkit-box-shadow: 8px 8px 0px 0px rgba(100, 255, 218, 1);
-    -moz-box-shadow: 8px 8px 0px 0px rgba(100, 255, 218, 1);
-    box-shadow: 8px 8px 0px 0px rgba(100, 255, 218, 1);
+    -webkit-box-shadow: 8px 8px 0px 0px v.$light-blue;
+    -moz-box-shadow: 8px 8px 0px 0px v.$light-blue;
+    box-shadow: 8px 8px 0px 0px v.$light-blue;
   }
 }
 
@@ -110,26 +122,25 @@ body {
       }
     }
   }
+
   &__container__text--blue {
     @include m.blue-text;
   }
 }
 
 .experience {
-  font-family: v.$font-primary;
-  color: v.$white;
-  margin: 7rem 0 20rem 10rem;
+  margin: 7rem 0 9rem 10rem;
   font-size: 1.25rem;
   position: relative;
 
-  &__description {
+  &__container__description {
     margin-left: 4rem;
   }
-  &__date {
+  &__container__date {
     color: v.$light-gray;
     margin: 0 0 1rem 2.5rem;
   }
-  &__content {
+  &__container__content {
     display: inline;
     font-size: 1rem;
 
@@ -169,5 +180,75 @@ body {
     border-left: 1px dashed v.$light-blue;
     margin: -6.5rem 0 0 0.75rem;
     position: absolute;
+  }
+}
+
+.projects {
+  margin: 7rem 0 0 10rem;
+  font-size: 1.25rem;
+
+  &__container {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 5rem;
+  }
+}
+
+.card {
+  width: 25%;
+  height: 20rem;
+  border-radius: 5px;
+  background: v.$deep-blue;
+  text-decoration: none;
+  cursor: pointer;
+
+  &__icon-earth {
+    margin: 1.5rem 0 2rem 1.5rem;
+  }
+
+  &__body__title {
+    font-size: 1.25rem;
+    margin-left: 1rem;
+    font-weight: 700;
+    color: v.$light-heather;
+  }
+
+  &__body__content {
+    font-size: 1rem;
+    margin: 1rem;
+    line-height: 1.25rem;
+    color: v.$greyish-blue;
+  }
+
+  &__body__footer {
+    color: v.$lighter-gray;
+    font-size: 0.75rem;
+    margin: 6rem 0 0 1rem;
+  }
+
+  &:hover {
+    
+    filter: brightness(1.4);
+  }
+}
+
+.footer {
+  margin: 7rem 0 3rem 0;
+  font-size: 1.25rem;
+  text-align: center;
+
+  &__container__content {
+    margin-top: 4rem;
+    margin: 4rem 0 4rem 0;
+    font-size: 1rem;
+  }
+
+  .a-linkedin {
+    @include m.blue-btn;
+    margin: 0 auto;
+
+    &:hover {
+      filter: brightness(2.8);
+    }
   }
 }
