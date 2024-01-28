@@ -8,6 +8,17 @@ body {
   background-color: v.$dark-blue;
   font-family: v.$font-primary;
   color: v.$white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page {
+  // background-color: pink;
+  max-width: 1141px;
+  width: 100%;
+  display: block;
+  padding-left: 0.5rem;
 }
 
 a,
@@ -20,9 +31,9 @@ a:focus {
 
 .nav {
   width: 100%;
-  border: 0.5px solid v.$light-blue;
+  border-bottom: 0.5px solid v.$light-blue;
   display: flex;
-  margin-bottom: 6.5rem;
+  margin-bottom: 9.5rem;
   display: flex;
   justify-content: flex-end;
   font-size: 0.75rem;
@@ -47,7 +58,7 @@ a:focus {
     &--dark {
       font-size: 4rem;
       width: 100%;
-      margin: 0.25rem 0 0 10rem;
+      line-height: normal;
     }
 
     &--bright {
@@ -63,11 +74,12 @@ a:focus {
   }
 
   &__subheader {
-    width: 33.25rem;
-    margin: 2rem 0 2rem 10rem;
+    width: 34.75rem;
     font-family: v.$font-secondary;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     color: v.$white;
+    margin: 1.25rem 0 4.5rem 0;
+    font-size: 1.25rem;
   }
 
   .main__container__btn {
@@ -76,27 +88,34 @@ a:focus {
     &:hover {
       cursor: pointer;
       filter: brightness(2.8);
+      transition: 0.3s;
     }
   }
 }
 
 .about {
-  margin: 7rem 0 0 10rem;
   font-size: 1.25rem;
+  margin-top: 5rem;
 
   &__container {
     color: v.$white;
     font-size: 0.75rem;
     width: 40rem;
-    margin: 3rem 15rem 0 0;
-    line-height: 1.25rem;
+    padding: 0 8rem 0 0;
+    line-height: 1.5rem;
     display: inline-block;
+    font-size: 1.25rem;
+  }
+
+  &__text--blue {
+    font-size: 3rem;
   }
 
   &__img {
-    width: 13rem;
+    width: 15rem;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 7rem;
+    // nie wiem jak inaczej ogarnąć pozycję tego zdjęcia poza marginem
     -webkit-box-shadow: 8px 8px 0px 0px v.$light-blue;
     -moz-box-shadow: 8px 8px 0px 0px v.$light-blue;
     box-shadow: 8px 8px 0px 0px v.$light-blue;
@@ -111,6 +130,9 @@ a:focus {
       width: 100%;
       display: flex;
       align-items: center;
+      font-size: 2rem;
+      padding-bottom: 6.5rem;
+      padding-top: 8.5rem;
 
       &::after {
         content: "";
@@ -118,27 +140,31 @@ a:focus {
         width: 100%;
         height: 1px;
         border-bottom: 1px dashed v.$light-blue;
-        margin-left: 1rem;
       }
     }
   }
 
+  &__container__text--blue-n {
+    @include m.blue-text;
+    font-size: 1.5rem;
+  }
   &__container__text--blue {
     @include m.blue-text;
   }
 }
 
 .experience {
-  margin: 7rem 0 9rem 10rem;
   font-size: 1.25rem;
   position: relative;
+  margin-top: 3rem;
 
   &__container__description {
-    margin-left: 4rem;
+    padding: 0 0 2rem 6.5rem;
   }
   &__container__date {
     color: v.$light-gray;
-    margin: 0 0 1rem 2.5rem;
+    padding: 0 0 2rem 4.2rem;
+    // pojęcia bladego nie mam jak to wyrównać do description, mogę tak po prostu paddingiem?
   }
   &__container__content {
     display: inline;
@@ -149,9 +175,10 @@ a:focus {
       width: 1rem;
       height: 1rem;
       transform: rotate(-45deg);
-      border: 4px solid v.$light-blue;
+      border: 2px solid v.$light-blue;
       display: inline-block;
-      margin-right: 0.5rem;
+      background-color: v.$dark-heather;
+      margin-right: 2rem;
     }
   }
 
@@ -159,7 +186,6 @@ a:focus {
     color: v.$white;
     font-size: 0.75rem;
     width: 40rem;
-    margin: 3rem 15rem 0 0;
     line-height: 1.25rem;
     display: inline-block;
   }
@@ -169,7 +195,8 @@ a:focus {
     display: block;
     height: 9rem;
     border-left: 1px dashed v.$light-blue;
-    margin: 7rem 0 0 0.75rem;
+    margin: 19.5rem 0 0 0.6rem;
+    //nie do końca wiem jak to zrobić żeby utsawić te kreski dobrze
     position: absolute;
   }
 
@@ -178,68 +205,71 @@ a:focus {
     display: block;
     height: 8rem;
     border-left: 1px dashed v.$light-blue;
-    margin: -6.5rem 0 0 0.75rem;
+    margin: -9.5rem 0 0 0.6rem;
     position: absolute;
+    // czy to before i after to tak powinno być? bo tu te marginy tak na oko ustawiałam, no i wartość 0.6 rem żeby kreska była po środku kwadracika
   }
 }
 
 .projects {
-  margin: 7rem 0 0 10rem;
+  margin-top: 3rem;
   font-size: 1.25rem;
 
   &__container {
     display: flex;
     gap: 2.5rem;
-    margin-top: 5rem;
   }
 }
 
 .card {
-  width: 25%;
-  height: 20rem;
+  width: 30%;
+  height: 25rem;
   border-radius: 5px;
   background: v.$deep-blue;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  align-items: flex-start;
 
   &__icon-earth {
-    margin: 1.5rem 0 2rem 1.5rem;
+    padding: 0.75rem 0 0 0;
   }
 
   &__body__title {
     font-size: 1.25rem;
-    margin-left: 1rem;
     font-weight: 700;
     color: v.$light-heather;
+    padding: 0 0 1rem 0;
   }
 
   &__body__content {
     font-size: 1rem;
-    margin: 1rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     color: v.$greyish-blue;
   }
 
   &__body__footer {
     color: v.$lighter-gray;
     font-size: 0.75rem;
-    margin: 6rem 0 0 1rem;
   }
 
   &:hover {
-    
     filter: brightness(1.4);
   }
 }
 
 .footer {
-  margin: 7rem 0 3rem 0;
-  font-size: 1.25rem;
+  margin: 13rem 0 0 0;
+  font-size: 2rem;
   text-align: center;
 
   &__container__content {
-    margin-top: 4rem;
-    margin: 4rem 0 4rem 0;
+    padding: 4rem 0 4rem 0;
     font-size: 1rem;
   }
 
@@ -249,6 +279,7 @@ a:focus {
 
     &:hover {
       filter: brightness(2.8);
+      transition: 0.3s;
     }
   }
 }

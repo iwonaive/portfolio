@@ -67,6 +67,16 @@ body {
   background-color: rgb(10, 25, 48);
   font-family: Fira Code;
   color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page {
+  max-width: 1141px;
+  width: 100%;
+  display: block;
+  padding-left: 0.5rem;
 }
 
 a,
@@ -79,9 +89,9 @@ a:focus {
 
 .nav {
   width: 100%;
-  border: 0.5px solid rgb(100, 255, 218);
+  border-bottom: 0.5px solid rgb(100, 255, 218);
   display: flex;
-  margin-bottom: 6.5rem;
+  margin-bottom: 9.5rem;
   display: flex;
   justify-content: flex-end;
   font-size: 0.75rem;
@@ -103,7 +113,7 @@ a:focus {
 .main__container__heading--bright, .main__container__heading--dark {
   font-size: 4rem;
   width: 100%;
-  margin: 0.25rem 0 0 10rem;
+  line-height: normal;
 }
 .main__container__heading--bright {
   display: flex;
@@ -115,44 +125,50 @@ a:focus {
   color: rgb(136, 146, 192);
 }
 .main__container__subheader {
-  width: 33.25rem;
-  margin: 2rem 0 2rem 10rem;
+  width: 34.75rem;
   font-family: Fjalla One;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   color: rgb(255, 255, 255);
+  margin: 1.25rem 0 4.5rem 0;
+  font-size: 1.25rem;
 }
 .main__container .main__container__btn {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: rgb(100, 255, 218);
   padding: 1rem 1.5rem;
   background: none;
-  margin-left: 10rem;
-  margin-top: 1.5rem;
   font-family: Fira Code;
   border-radius: 5px;
   border: 0.5px solid rgb(100, 255, 218);
+  display: block;
+  width: fit-content;
 }
 .main__container .main__container__btn:hover {
   cursor: pointer;
   filter: brightness(2.8);
+  transition: 0.3s;
 }
 
 .about {
-  margin: 7rem 0 0 10rem;
   font-size: 1.25rem;
+  margin-top: 5rem;
 }
 .about__container {
   color: rgb(255, 255, 255);
   font-size: 0.75rem;
   width: 40rem;
-  margin: 3rem 15rem 0 0;
-  line-height: 1.25rem;
+  padding: 0 8rem 0 0;
+  line-height: 1.5rem;
   display: inline-block;
+  font-size: 1.25rem;
+}
+.about__text--blue {
+  font-size: 3rem;
 }
 .about__img {
-  width: 13rem;
+  width: 15rem;
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 7rem;
   -webkit-box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
   -moz-box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
   box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
@@ -166,6 +182,9 @@ a:focus {
   width: 100%;
   display: flex;
   align-items: center;
+  font-size: 2rem;
+  padding-bottom: 6.5rem;
+  padding-top: 8.5rem;
 }
 .section__heading__text::after {
   content: "";
@@ -173,7 +192,11 @@ a:focus {
   width: 100%;
   height: 1px;
   border-bottom: 1px dashed rgb(100, 255, 218);
-  margin-left: 1rem;
+}
+.section__container__text--blue-n {
+  font-family: Fira Code;
+  color: rgb(100, 255, 218);
+  font-size: 1.5rem;
 }
 .section__container__text--blue {
   font-family: Fira Code;
@@ -181,16 +204,16 @@ a:focus {
 }
 
 .experience {
-  margin: 7rem 0 9rem 10rem;
   font-size: 1.25rem;
   position: relative;
+  margin-top: 3rem;
 }
 .experience__container__description {
-  margin-left: 4rem;
+  padding: 0 0 2rem 6.5rem;
 }
 .experience__container__date {
   color: rgba(255, 240, 240, 0.6);
-  margin: 0 0 1rem 2.5rem;
+  padding: 0 0 2rem 4.2rem;
 }
 .experience__container__content {
   display: inline;
@@ -201,15 +224,15 @@ a:focus {
   width: 1rem;
   height: 1rem;
   transform: rotate(-45deg);
-  border: 4px solid rgb(100, 255, 218);
+  border: 2px solid rgb(100, 255, 218);
   display: inline-block;
-  margin-right: 0.5rem;
+  background-color: rgb(136, 146, 192);
+  margin-right: 2rem;
 }
 .experience__container {
   color: rgb(255, 255, 255);
   font-size: 0.75rem;
   width: 40rem;
-  margin: 3rem 15rem 0 0;
   line-height: 1.25rem;
   display: inline-block;
 }
@@ -218,7 +241,7 @@ a:focus {
   display: block;
   height: 9rem;
   border-left: 1px dashed rgb(100, 255, 218);
-  margin: 7rem 0 0 0.75rem;
+  margin: 19.5rem 0 0 0.6rem;
   position: absolute;
 }
 .experience::after {
@@ -226,74 +249,78 @@ a:focus {
   display: block;
   height: 8rem;
   border-left: 1px dashed rgb(100, 255, 218);
-  margin: -6.5rem 0 0 0.75rem;
+  margin: -9.5rem 0 0 0.6rem;
   position: absolute;
 }
 
 .projects {
-  margin: 7rem 0 0 10rem;
+  margin-top: 3rem;
   font-size: 1.25rem;
 }
 .projects__container {
   display: flex;
   gap: 2.5rem;
-  margin-top: 5rem;
 }
 
 .card {
-  width: 25%;
-  height: 20rem;
+  width: 30%;
+  height: 25rem;
   border-radius: 5px;
   background: rgb(17, 34, 64);
   text-decoration: none;
   cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  align-items: flex-start;
 }
 .card__icon-earth {
-  margin: 1.5rem 0 2rem 1.5rem;
+  padding: 0.75rem 0 0 0;
 }
 .card__body__title {
   font-size: 1.25rem;
-  margin-left: 1rem;
   font-weight: 700;
   color: rgb(204, 214, 246);
+  padding: 0 0 1rem 0;
 }
 .card__body__content {
   font-size: 1rem;
-  margin: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
   color: rgb(168, 178, 209);
 }
 .card__body__footer {
   color: rgb(196, 196, 196);
   font-size: 0.75rem;
-  margin: 6rem 0 0 1rem;
 }
 .card:hover {
   filter: brightness(1.4);
 }
 
 .footer {
-  margin: 7rem 0 3rem 0;
-  font-size: 1.25rem;
+  margin: 13rem 0 0 0;
+  font-size: 2rem;
   text-align: center;
 }
 .footer__container__content {
-  margin-top: 4rem;
-  margin: 4rem 0 4rem 0;
+  padding: 4rem 0 4rem 0;
   font-size: 1rem;
 }
 .footer .a-linkedin {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: rgb(100, 255, 218);
   padding: 1rem 1.5rem;
   background: none;
-  margin-left: 10rem;
-  margin-top: 1.5rem;
   font-family: Fira Code;
   border-radius: 5px;
   border: 0.5px solid rgb(100, 255, 218);
+  display: block;
+  width: fit-content;
   margin: 0 auto;
 }
 .footer .a-linkedin:hover {
   filter: brightness(2.8);
+  transition: 0.3s;
 }/*# sourceMappingURL=style.css.map */

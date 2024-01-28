@@ -6,7 +6,7 @@
     <title>Iwona's Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body> 
     <nav class="nav">
       <a class="nav__link"
         ><span class="nav__link__content--blue">01.</span> à propos</a
@@ -21,6 +21,8 @@
         ><span class="nav__link__content--blue">04.</span> contact</a
       >
     </nav>
+    <div class="page">
+   
 
     <section class="main">
       <div class="main__container">
@@ -33,7 +35,7 @@
           professional developer. My dream is to find a job and gain some
           commercial experience working with real team. When I'm not coding you
           can find me at the gym. Coffee lover, kettlebell lover and a big fan
-          of Neapolitan pizza.
+          of Neapolitan pizza. If I'm missing I'm probably sleeping or at the gym.
         </div>
 
         <a href="./download/Resume.pdf" target="_blank" class="main__container__btn">Download my resume
@@ -44,8 +46,8 @@
     <section class="about section">
       <div class="section__heading">
         <h2 class="section__heading__text">
-          <span class="section__container__text--blue">01.</span>
-          About
+          <span class="section__container__text--blue-n">01.</span>
+          About 
         </h2>
       </div>
 
@@ -92,7 +94,7 @@
     <section class="experience section">
       <div class="section__heading">
         <h2 class="section__heading__text">
-          <span class="section__container__text--blue">02.</span>
+          <span class="section__container__text--blue-n">02.</span>
           Experience
         </h2>
       </div>
@@ -103,11 +105,15 @@
         </h5>
         <p class="experience__container__date">December 2023 - March 2024</p>
         <p class="experience__container__description">
-          - Write performant and maintainable code. <br />
-          - Communicate and work with multi-disciplinary team of UI designer, UX
+          <img class="experience__container__icon-triangle" src="./img/svg/icon-triangle.svg"> </>
+          Write performant and maintainable code. <br />
+           <img class="experience__container__icon-triangle" src="./img/svg/icon-triangle.svg"> </>
+          Communicate and work with multi-disciplinary team of UI designer, UX
           designer, PM & tester.<br />
-          - Work with team on a real project - coming soon. <br />
-          - Create this portfolio based on project from Figma. <br />
+           <img class="experience__container__icon-triangle" src="./img/svg/icon-triangle.svg"> </>
+          Work with team on a real project - coming soon. <br />
+           <img class="experience__container__icon-triangle" src="./img/svg/icon-triangle.svg"> </>
+          Create this portfolio based on project from Figma. <br />
         </p>
       </div>
 
@@ -117,27 +123,31 @@
         </h5>
         <p class="experience__container__date">March - July 2023</p>
         <p class="experience__container__description">
-          - Develop programming skills and improve quality of programming
-          code.<br />
-          - Communicate and work with fellow student on Angular project -
+          <img class="experience__container__icon-triangle" src="./img/svg/icon-triangle.svg"> </>
+          Develop programming skills and improve quality of programming
+          code. <br />
+          <img class="experience__container__icon-triangle" src="./img/svg/icon-triangle.svg"> </>
+          Communicate and work with fellow student on Angular project -
           website to book sits on the plane.<br />
-          - Create a food recipe search app that uses JavaScript and API. <br />
+          <img class="experience__container__icon-triangle" src="./img/svg/icon-triangle.svg"> </>
+          Create a food recipe search app that uses JavaScript and API. <br />
         </p>
+        <!-- nie wiem jak zrobić zgonie ze wzorem, że druga linijka tekstu nie jest na równi z pierwszą, tylko zaczyna się wcześniej -->
       </div>
     </section>
 
     <section class="projects section">
       <div class="section__heading">
         <h2 class="section__heading__text">
-          <span class="section__container__text--blue">03.</span>
+          <span class="section__container__text--blue-n">03.</span>
           Projects
         </h2>
       </div>
       
       <div class="projects__container">
 
-        <article class="card">
-          <a href="" target="_blank">
+
+          <a href="" target="_blank" class="card">
              <img class="card__icon-earth" src="./img/svg/icon-earth.svg"> </>
           <div class="card__body">
           <h3 class="card__body__title">Dare IT Project</h3>
@@ -145,38 +155,40 @@
           </div>
           <footer class="card__body__footer">Angular | SCSS | Figma</footer>
           </a>
-        </article>
 
 
 
-        <article class="card">
-        <a href="https://github.com/iwonaive/portfolio" target="_blank">
+        <a href="https://github.com/iwonaive/portfolio" target="_blank" class="card">
              <img class="card__icon-earth" src="./img/svg/icon-earth.svg"> </>
           <div class="card__body">
           <h3 class="card__body__title">Personal Website</h3>
-          <p class="card__body__content">You can see it right now! I'm really proud of this project :) </p>
+          <p class="card__body__content">You can see it right now! I'm really proud of this portfolio project :) </p>
           </div>
           <footer class="card__body__footer">SCSS | Figma</footer>
         </a>
-        </article>
+      
 
-        <article class="card">
-        <a href="https://github.com/iwonaive/ang14-projekt-rezerwacja-miejsc-w-samolocie" target="_blank">
+
+        <a href="https://github.com/iwonaive/ang14-projekt-rezerwacja-miejsc-w-samolocie" target="_blank" class="card">
           <img class="card__icon-earth" src="./img/svg/icon-earth.svg"> </>
           <div class="card__body">
           <h3 class="card__body__title">Plane seats booking</h3>
-          <p class="card__body__content">Angular project, made for booking seats on the plane. </p>
+          <p class="card__body__content">Here you can find an Angular project, made for booking seats on the plane. </p>
+</div>
+
           <footer class="card__body__footer">Angular | TypeScript | CSS </footer>
+        
         </a>
-        </article>
-      </div>
+
+
+      
  </section>
 
 <footer class="footer">
   <div class="footer__container">
   <div class="footer__heading">
         <h2 class="footer__heading__text">
-          <span class="section__container__text--blue">04.</span>
+          <span class="section__container__text--blue-n">04.</span>
           Contact
         </h2>
       </div>
@@ -186,6 +198,7 @@
       <a href="https://linkedin.com/in/iwona-szymaniak" target="_blank" class="a-linkedin">LinkedIn
       </a>
   </div>
-  </footer>    
+  </footer>   
+  </div> 
   </body>
 </html>

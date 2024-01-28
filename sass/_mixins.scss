@@ -2,18 +2,26 @@
 @use "fonts";
 
 @mixin blue-btn {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: v.$light-blue;
   padding: 1rem 1.5rem;
   background: none;
-  margin-left: 10rem;
-  margin-top: 1.5rem;
+  // margin-left: 10rem;
+  // margin-top: 1.5rem;
   font-family: v.$font-primary;
   border-radius: 5px;
   border: 0.5px solid v.$light-blue;
+  display: block;
+  width: fit-content;
 }
 
 @mixin blue-text {
   font-family: v.$font-primary;
   color: v.$light-blue;
+  // font-size: 1.25rem;
+}
+@mixin blue-number {
+font-family: v.$font-primary;
+  color: v.$light-blue;
+// font-size: 1.5rem;
 }
