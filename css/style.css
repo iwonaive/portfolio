@@ -62,6 +62,10 @@ table {
   border-spacing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   background-color: rgb(10, 25, 48);
@@ -85,6 +89,7 @@ a:active,
 a:visited,
 a:focus {
   text-decoration: none;
+  color: inherit;
 }
 
 .nav {
@@ -99,6 +104,7 @@ a:focus {
 }
 .nav__link {
   padding: 0 1rem;
+  cursor: pointer;
 }
 .nav__link__content--blue {
   font-family: Fira Code;
@@ -300,7 +306,7 @@ a:focus {
 }
 
 .footer {
-  margin: 13rem 0 0 0;
+  margin: 13rem 0 7rem 0;
   font-size: 2rem;
   text-align: center;
 }
