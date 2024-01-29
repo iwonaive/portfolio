@@ -217,6 +217,13 @@ a:focus {
 .experience__container__description {
   padding: 0 0 2rem 6.5rem;
 }
+.experience__container__description .par {
+  content: "";
+}
+.experience__container__description .par::before {
+  content: url(../img/svg/icon-triangle.svg);
+  padding: 0 5px 0 0;
+}
 .experience__container__date {
   color: rgba(255, 240, 240, 0.6);
   padding: 0 0 2rem 4.2rem;
@@ -245,7 +252,7 @@ a:focus {
 .experience::before {
   content: "";
   display: block;
-  height: 9rem;
+  height: 14rem;
   border-left: 1px dashed rgb(100, 255, 218);
   margin: 19.5rem 0 0 0.6rem;
   position: absolute;
@@ -253,9 +260,9 @@ a:focus {
 .experience::after {
   content: "";
   display: block;
-  height: 8rem;
+  height: 12rem;
   border-left: 1px dashed rgb(100, 255, 218);
-  margin: -9.5rem 0 0 0.6rem;
+  margin: -13rem 0 0 0.6rem;
   position: absolute;
 }
 

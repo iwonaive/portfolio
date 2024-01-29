@@ -165,6 +165,21 @@ a:focus {
 
   &__container__description {
     padding: 0 0 2rem 6.5rem;
+
+    // &::before {
+    //   content:url(../img/svg/icon-triangle.svg);
+
+    // }
+
+    .par {
+      content: "";
+
+      &::before {
+        content: url(../img/svg/icon-triangle.svg);
+        padding: 0 5px 0 0;
+      }
+    }
+    // Nie wiem co wpisać w .par żeby grało + czy to tak powinno być? Nazwa tego .par też słaba, coś dziś kreatywność ujemna
   }
   &__container__date {
     color: v.$light-gray;
@@ -198,19 +213,19 @@ a:focus {
   &::before {
     content: "";
     display: block;
-    height: 9rem;
+    height: 14rem;
     border-left: 1px dashed v.$light-blue;
     margin: 19.5rem 0 0 0.6rem;
-    //nie do końca wiem jak to zrobić żeby utsawić te kreski dobrze
+    //nie do końca wiem jak to zrobić żeby utsawić te kreski dobrze, więc kombinuje
     position: absolute;
   }
 
   &::after {
     content: "";
     display: block;
-    height: 8rem;
+    height: 12rem;
     border-left: 1px dashed v.$light-blue;
-    margin: -9.5rem 0 0 0.6rem;
+    margin: -13rem 0 0 0.6rem;
     position: absolute;
     // czy to before i after to tak powinno być? bo tu te marginy tak na oko ustawiałam, no i wartość 0.6 rem żeby kreska była po środku kwadracika
   }
