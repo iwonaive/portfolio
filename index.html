@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="eng">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iwona's Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body> 
-    <nav class="nav">
-      <a href="#about" class="nav__link"
-        ><span class="nav__link__content--blue">01.</span> à propos</a
-      >
-      <a href="#experience" class="nav__link"
-        ><span class="nav__link__content--blue">02.</span> experience</a
-      >
-      <a href="#projects" class="nav__link"
-        ><span class="nav__link__content--blue">03.</span> projets</a
-      >
-      <a href="#contact" class="nav__link"
-        ><span class="nav__link__content--blue">04.</span> contact</a
-      >
-    </nav>
-    <div class="page">
-   
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iwona's Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav__wrapper">
+      <a href="#about" class="nav__wrapper__link"><span class="nav__wrapper__link--blue">01.</span>à propos</a>
+      <a href="#experience" class="nav__wrapper__link"><span class="nav__wrapper__link--blue">02.</span>experience</a>
+      <a href="#projects" class="nav__wrapper__link"><span class="nav__wrapper__link--blue">03.</span>projets</a>
+      <a href="#contact" class="nav__wrapper__link"><span class="nav__wrapper__link--blue">04.</span>contact</a>
+    </div>
+  </nav>
+
+  <div class="page">
 
     <section class="main">
       <div class="main__container">
@@ -39,7 +35,7 @@
         </div>
 
         <a href="./download/Resume.pdf" target="_blank" class="main__container__btn">Download my resume
-      </a>
+        </a>
       </div>
     </section>
 
@@ -47,48 +43,46 @@
       <div class="section__heading">
         <h2 class="section__heading__text">
           <span class="section__container__text--blue-n">01.</span>
-          About 
+          About
         </h2>
       </div>
 
-      <div class="about__container">
-        <p>
-          Hello, I'm Iwona and I'm an entry-level
-          <span class="section__container__text--blue">Frontend Developer</span
-          >.
-        </p>
-        <br />
-        <p>
-          My journey to become a developer started in 2022. In 2023 I finished
-          <span class="section__container__text--blue"
-            >postgraduate studies</span
-          >
-          - Frontend Web Development. Before that I was learning by myself, by
-          using quality courses and lectures.
-        </p>
-        <br />
-        <p>
-          Also in 2023 I had the wonderful opportunity to start the
-          participation in
-          <span class="section__container__text--blue"
-            >Dare IT Mentoring Program</span
-          >, which is ment for woman who want to join IT. Dare IT Mentoring is a
-          4-month program where I work with my mentor on my Frontend Developer
-          skills. In addition to 1:1 sessions with a mentor, the Program offers:
-          HR consultations, thematic webinars, networking meetings, all in a
-          community of almost 300 people: mentors, HR consultants, Program
-          Partners and other mentees. Besides that I also work on my portfolio
-          and together with a real team we are creating a website (coming soon).
-          Nearly 1,000 candidates applied for the 120 spots - I'm very happy and
-          thankful for this opportinity.
-        </p>
-        <br />
-        <p>My plans for 2024 are pretty awsome, let's keep in touch!</p>
+      <div class="about__wrapper">
+        <div class="about__container">
+          <p>
+            Hello, I'm Iwona and I'm an entry-level
+            <span class="section__container__text--blue">Frontend Developer</span>.
+          </p>
+          <br />
+          <p>
+            My journey to become a developer started in 2022. In 2023 I finished
+            <span class="section__container__text--blue">postgraduate studies</span>
+            - Frontend Web Development. Before that I was learning by myself, by
+            using quality courses and lectures.
+          </p>
+          <br />
+          <p>
+            Also in 2023 I had the wonderful opportunity to start the
+            participation in
+            <span class="section__container__text--blue">Dare IT Mentoring Program</span>, which is ment for woman
+            who
+            want to join IT. Dare IT Mentoring is a
+            4-month program where I work with my mentor on my Frontend Developer
+            skills. In addition to 1:1 sessions with a mentor, the Program offers:
+            HR consultations, thematic webinars, networking meetings, all in a
+            community of almost 300 people: mentors, HR consultants, Program
+            Partners and other mentees. Besides that I also work on my portfolio
+            and together with a real team we are creating a website (coming soon).
+            Nearly 1,000 candidates applied for the 120 spots - I'm very happy and
+            thankful for this opportinity.
+          </p>
+          <br />
+          <p>My plans for 2024 are pretty awsome, let's keep in touch!</p>
+        </div>
+        <img src="https://cdn.pixabay.com/photo/2017/08/05/13/06/girl-2583442_1280.jpg" alt="photo of a girl"
+          class="about__img" />
       </div>
-      <img
-        src="https://cdn.pixabay.com/photo/2017/08/05/13/06/girl-2583442_1280.jpg"
-        alt="photo of a girl"
-        class="about__img" />
+
     </section>
 
     <section class="experience section" id="experience">
@@ -100,33 +94,31 @@
       </div>
 
       <div class="experience__container">
-        <h5 class="experience__container__content">
+        <h5 class="experience__container__title">
           DARE IT Mentoring Program - Frontend Developer
         </h5>
         <p class="experience__container__date">December 2023 - March 2024</p>
         <div class="experience__container__description">
-           <p class="par">Write performant and maintainable code.</p> <br />
-          <p class="par">Communicate and work with multi-disciplinary team of UI designer, UX
-          designer, PM & tester.</p>  <br />
-          <p class="par">Work with team on a real project - coming soon.</p> <br />
-         <p class="par">Create this portfolio based on project from Figma.</p> <br />
-          </div>
+          <p class="skills">Write performant and maintainable code.</p>
+          <p class="skills">Communicate and work with multi-disciplinary team of UI designer, UX
+            designer, PM & tester.</p>
+          <p class="skills">Work with team on a real project - coming soon.</p>
+          <p class="skills">Create this portfolio based on project from Figma.</p>
+        </div>
       </div>
 
       <div class="experience__container">
-        <h5 class="experience__container__content">
+        <h5 class="experience__container__title">
           University Of Social Sciences - Frontend Developer
         </h5>
         <p class="experience__container__date">March - July 2023</p>
         <div class="experience__container__description">
-           <p class="par">Develop programming skills and improve quality of programming
-          code.</p> <br />
-           <p class="par">Communicate and work with fellow student on Angular project -
-          website to book sits on the plane.</p><br />
-           <p class="par">Create a food recipe search app that uses JavaScript and API.</p> <br />
-        </>
-        <!-- nie wiem jak zrobić zgonie ze wzorem, że druga linijka tekstu nie jest na równi z pierwszą, tylko zaczyna się wcześniej -->
-      </div>
+          <p class="skills">Develop programming skills and improve quality of programming
+            code.</p>
+          <p class="skills">Communicate and work with fellow student on Angular project -
+            website to book sits on the plane.</p>
+          <p class="skills">Create a food recipe search app that uses JavaScript and API.</p>
+        </div>
     </section>
 
     <section class="projects section" id="projects">
@@ -136,62 +128,56 @@
           Projects
         </h2>
       </div>
-      
+
       <div class="projects__container">
-
-
-          <a href="" target="_blank" class="card">
-             <img class="card__icon-earth" src="./img/svg/icon-earth.svg"> </>
+        <a href="" target="_blank" class="card">
+          <img class="card__icon-earth" src="./img/svg/icon-earth.svg">
           <div class="card__body">
-          <h3 class="card__body__title">Dare IT Project</h3>
-          <p class="card__body__content">This is the project I'm creating with my DARE IT team. Coming soon!</p>
+            <h3 class="card__body__title">Dare IT Project</h3>
+            <p class="card__body__content">This is the project I'm creating with my DARE IT team. Coming soon!</p>
           </div>
           <footer class="card__body__footer">Angular | SCSS | Figma</footer>
-          </a>
-
-
+        </a>
 
         <a href="https://github.com/iwonaive/portfolio" target="_blank" class="card">
-             <img class="card__icon-earth" src="./img/svg/icon-earth.svg"> </>
+          <img class="card__icon-earth" src="./img/svg/icon-earth.svg">
           <div class="card__body">
-          <h3 class="card__body__title">Personal Website</h3>
-          <p class="card__body__content">You can see it right now! I'm really proud of this portfolio project :) </p>
+            <h3 class="card__body__title">Personal Website</h3>
+            <p class="card__body__content">You can see it right now! I'm really proud of this portfolio project :)
+            </p>
           </div>
           <footer class="card__body__footer">SCSS | Figma</footer>
         </a>
-      
-
 
         <a href="https://github.com/iwonaive/ang14-projekt-rezerwacja-miejsc-w-samolocie" target="_blank" class="card">
-          <img class="card__icon-earth" src="./img/svg/icon-earth.svg"> </>
+          <img class="card__icon-earth" src="./img/svg/icon-earth.svg">
           <div class="card__body">
-          <h3 class="card__body__title">Plane seats booking</h3>
-          <p class="card__body__content">Here you can find an Angular project, made for booking seats on the plane. </p>
-</div>
-
+            <h3 class="card__body__title">Plane seats booking</h3>
+            <p class="card__body__content">Here you can find an Angular project, made for booking seats on the
+              plane.
+            </p>
+          </div>
           <footer class="card__body__footer">Angular | TypeScript | CSS </footer>
-        
         </a>
 
+    </section>
 
-      
- </section>
-
-<footer class="footer" id="contact">
-  <div class="footer__container">
-  <div class="footer__heading">
-        <h2 class="footer__heading__text">
-          <span class="section__container__text--blue-n">04.</span>
-          Contact
-        </h2>
+    <footer class="footer" id="contact">
+      <div class="footer__container">
+        <div class="footer__heading">
+          <h2 class="footer__heading__text">
+            <span class="section__container__text--blue-n">04.</span>
+            Contact
+          </h2>
+        </div>
+        <p class="footer__container__content">
+          I'm always looking for new opportunities! Contact me via button below.
+        </p>
+        <a href="https://linkedin.com/in/iwona-szymaniak" target="_blank" class="a-linkedin">LinkedIn
+        </a>
       </div>
-      <p class="footer__container__content">
-        I'm always looking for new opportunities! Contact me via button below.
-      </p>
-      <a href="https://linkedin.com/in/iwona-szymaniak" target="_blank" class="a-linkedin">LinkedIn
-      </a>
+    </footer>
   </div>
-  </footer>   
-  </div> 
-  </body>
+</body>
+
 </html>
