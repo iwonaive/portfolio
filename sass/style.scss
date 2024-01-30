@@ -3,11 +3,25 @@
 @use "reset";
 @use "variables" as v;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   background-color: v.$dark-blue;
   font-family: v.$font-primary;
   color: v.$white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page {
+  max-width: 1141px;
+  width: 100%;
+  display: block;
+  padding: 0 0.5rem;
 }
 
 a,
@@ -16,23 +30,32 @@ a:active,
 a:visited,
 a:focus {
   text-decoration: none;
+  color: inherit;
 }
 
 .nav {
   width: 100%;
-  border: 0.5px solid v.$light-blue;
+  border-bottom: 0.5px solid v.$light-blue;
   display: flex;
-  margin-bottom: 6.5rem;
-  display: flex;
-  justify-content: flex-end;
+  margin-bottom: 9.5rem;
+  justify-content: center;
   font-size: 0.75rem;
   line-height: 3.5rem;
 
-  &__link {
-    padding: 0 1rem;
+  &__wrapper {
+    max-width: 1141px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 
-    &__content--blue {
-      @include m.blue-text;
+    &__link {
+      padding: 0 1rem;
+      cursor: pointer;
+
+      &--blue {
+        @include m.blue-text;
+        margin: 0 2px 0 0;
+      }
     }
   }
 }
@@ -47,7 +70,7 @@ a:focus {
     &--dark {
       font-size: 4rem;
       width: 100%;
-      margin: 0.25rem 0 0 10rem;
+      line-height: normal;
     }
 
     &--bright {
@@ -63,11 +86,12 @@ a:focus {
   }
 
   &__subheader {
-    width: 33.25rem;
-    margin: 2rem 0 2rem 10rem;
+    width: 34.75rem;
     font-family: v.$font-secondary;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     color: v.$white;
+    margin: 1.25rem 0 4.5rem 0;
+    font-size: 1.25rem;
   }
 
   .main__container__btn {
@@ -76,27 +100,39 @@ a:focus {
     &:hover {
       cursor: pointer;
       filter: brightness(2.8);
+      transition: 0.3s;
     }
   }
 }
 
 .about {
-  margin: 7rem 0 0 10rem;
   font-size: 1.25rem;
+  margin-top: 5rem;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
 
   &__container {
     color: v.$white;
     font-size: 0.75rem;
     width: 40rem;
-    margin: 3rem 15rem 0 0;
-    line-height: 1.25rem;
+    padding: 0 8rem 0 0;
+    line-height: 1.5rem;
     display: inline-block;
+    font-size: 1.25rem;
+  }
+
+  &__text--blue {
+    font-size: 3rem;
   }
 
   &__img {
-    width: 13rem;
+    width: 15rem;
+    height: fit-content;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 7rem;
     -webkit-box-shadow: 8px 8px 0px 0px v.$light-blue;
     -moz-box-shadow: 8px 8px 0px 0px v.$light-blue;
     box-shadow: 8px 8px 0px 0px v.$light-blue;
@@ -107,10 +143,14 @@ a:focus {
   &__heading {
     display: flex;
     width: 100%;
+
     &__text {
       width: 100%;
       display: flex;
       align-items: center;
+      font-size: 2rem;
+      padding-bottom: 6.5rem;
+      padding-top: 8.5rem;
 
       &::after {
         content: "";
@@ -123,123 +163,143 @@ a:focus {
     }
   }
 
+  &__container__text--blue-n {
+    @include m.blue-text;
+    font-size: 1.5rem;
+  }
+
   &__container__text--blue {
     @include m.blue-text;
   }
 }
 
 .experience {
-  margin: 7rem 0 9rem 10rem;
   font-size: 1.25rem;
-  position: relative;
+  margin-top: 3rem;
 
-  &__container__description {
-    margin-left: 4rem;
-  }
-  &__container__date {
-    color: v.$light-gray;
-    margin: 0 0 1rem 2.5rem;
-  }
-  &__container__content {
-    display: inline;
-    font-size: 1rem;
+  &__container {
+    position: relative;
+    color: v.$white;
+    font-size: 0.75rem;
+    max-width: 40rem;
+    line-height: 1.25rem;
+    padding-left: 4.25rem;
+    margin-bottom: 2.5rem;
 
     &::before {
       content: "";
+      display: block;
+      position: absolute;
+      left: 0;
       width: 1rem;
       height: 1rem;
       transform: rotate(-45deg);
-      border: 4px solid v.$light-blue;
-      display: inline-block;
-      margin-right: 0.5rem;
+      border: 2px solid v.$light-blue;
+      background-color: v.$dark-heather;
+      margin-right: 2rem;
     }
-  }
 
-  &__container {
-    color: v.$white;
-    font-size: 0.75rem;
-    width: 40rem;
-    margin: 3rem 15rem 0 0;
-    line-height: 1.25rem;
-    display: inline-block;
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2rem;
+      left: 0.625rem;
+      height: calc(100% - 0.75rem);
+      display: block;
+      width: 1px;
+      border-left: 0.5px dashed v.$light-blue;
+    }
 
-  &::before {
-    content: "";
-    display: block;
-    height: 9rem;
-    border-left: 1px dashed v.$light-blue;
-    margin: 7rem 0 0 0.75rem;
-    position: absolute;
-  }
+    &__title {
+      font-size: 1rem;
+    }
 
-  &::after {
-    content: "";
-    display: block;
-    height: 8rem;
-    border-left: 1px dashed v.$light-blue;
-    margin: -6.5rem 0 0 0.75rem;
-    position: absolute;
+    &__date {
+      color: v.$light-gray;
+      margin-bottom: 1.75rem;
+    }
+
+    &__description {
+      .skills {
+        margin-left: 3rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 2px solid transparent;
+          border-left: 6px solid v.$light-blue;
+          border-bottom: 2px solid transparent;
+          position: absolute;
+          left: -16px;
+          top: 0.5rem;
+        }
+      }
+    }
   }
 }
 
 .projects {
-  margin: 7rem 0 0 10rem;
+  margin-top: 3rem;
   font-size: 1.25rem;
 
   &__container {
     display: flex;
     gap: 2.5rem;
-    margin-top: 5rem;
   }
 }
 
 .card {
-  width: 25%;
-  height: 20rem;
+  width: 30%;
+  height: 25rem;
   border-radius: 5px;
   background: v.$deep-blue;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  align-items: flex-start;
 
   &__icon-earth {
-    margin: 1.5rem 0 2rem 1.5rem;
+    padding: 0.75rem 0 0 0;
   }
 
   &__body__title {
     font-size: 1.25rem;
-    margin-left: 1rem;
     font-weight: 700;
     color: v.$light-heather;
+    padding: 0 0 1rem 0;
   }
 
   &__body__content {
     font-size: 1rem;
-    margin: 1rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     color: v.$greyish-blue;
   }
 
   &__body__footer {
     color: v.$lighter-gray;
     font-size: 0.75rem;
-    margin: 6rem 0 0 1rem;
   }
 
   &:hover {
-    
     filter: brightness(1.4);
   }
 }
 
 .footer {
-  margin: 7rem 0 3rem 0;
-  font-size: 1.25rem;
+  margin: 13rem 0 7rem 0;
+  font-size: 2rem;
   text-align: center;
 
   &__container__content {
-    margin-top: 4rem;
-    margin: 4rem 0 4rem 0;
+    padding: 4rem 0 4rem 0;
     font-size: 1rem;
   }
 
@@ -249,6 +309,7 @@ a:focus {
 
     &:hover {
       filter: brightness(2.8);
+      transition: 0.3s;
     }
   }
 }
