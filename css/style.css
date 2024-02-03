@@ -350,4 +350,92 @@ a:focus {
 .footer .a-linkedin:hover {
   filter: brightness(2.8);
   transition: 0.3s;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-color: pink;
+  }
+  .nav__wrapper {
+    font-size: 0.5rem;
+    display: inline-block;
+  }
+  .page {
+    margin: 0 0 0 2rem;
+  }
+  .main__container {
+    margin: -5rem 0;
+  }
+  .main__container__heading--bright, .main__container__heading--dark {
+    font-size: 2rem;
+  }
+  .main__container__subheader {
+    font-size: 1rem;
+    max-width: 85vw;
+    width: fit-content;
+  }
+  .main__container .main__container__btn {
+    font-size: 0.75rem;
+    padding: 0.75rem;
+  }
+  .about {
+    margin-top: 0rem;
+    margin-left: 0.5rem;
+  }
+  .about__wrapper {
+    display: block;
+  }
+  .about__container {
+    font-size: 0.75rem;
+    padding: 0 4rem 0 0;
+    line-height: 1.25rem;
+    font-size: 0.75rem;
+    width: fit-content;
+  }
+  .about__text--blue {
+    font-size: 1rem;
+  }
+  .about__img {
+    width: 10rem;
+    height: fit-content;
+    display: inline-block;
+    margin-bottom: 0rem;
+    -webkit-box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
+    -moz-box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
+    box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
+  }
+  .section__heading__text {
+    font-size: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+  .experience {
+    margin-top: 0rem;
+  }
+  .experience__container {
+    padding-left: 2rem;
+    width: fit-content;
+  }
+  .experience__title {
+    width: fit-content;
+  }
+}
+@media (min-width: 576px) {
+  body {
+    background-color: lime;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-color: yellow;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    background-color: red;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background-color: darkblue;
+  }
 }/*# sourceMappingURL=style.css.map */

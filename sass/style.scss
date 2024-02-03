@@ -313,3 +313,130 @@ a:focus {
     }
   }
 }
+
+
+
+@media (max-width: 576px) {
+  body {
+    background-color: pink;
+  }
+  .nav {
+
+    &__wrapper {
+      font-size: 0.5rem;
+      display: inline-block;
+    }
+  }
+
+  .page {
+    margin: 0 0 0 2rem;
+  }
+
+  .main__container {
+    margin: -5rem 0;
+    &__heading {
+      &--bright,
+      &--dark {
+        font-size: 2rem;
+      }
+    }
+
+    &__subheader {
+      font-size: 1rem;
+      max-width: 85vw;
+      width: fit-content;
+    }
+    .main__container__btn {
+      font-size: 0.75rem;
+      padding: 0.75rem;
+    }
+  }
+
+.about {
+  margin-top: 0rem;
+  margin-left: 0.5rem;
+
+
+  &__wrapper {
+    display: block;
+  }
+
+  &__container {
+    font-size: 0.75rem;
+    padding: 0 4rem 0 0;
+    line-height: 1.25rem;
+    font-size: 0.75rem;
+    width: fit-content;
+  }
+
+  &__text--blue {
+    font-size: 1rem;
+  }
+
+  &__img {
+    width: 10rem;
+    height: fit-content;
+    display: inline-block;
+    margin-bottom: 0rem;
+    -webkit-box-shadow: 8px 8px 0px 0px v.$light-blue;
+    -moz-box-shadow: 8px 8px 0px 0px v.$light-blue;
+    box-shadow: 8px 8px 0px 0px v.$light-blue;
+  }
+}
+
+.section {
+  &__heading {
+
+    &__text {
+      font-size: 1.5rem;
+      padding-bottom: 3.5rem;
+
+}
+  }}
+
+  .experience {
+  margin-top: 0rem;
+
+  &__container {
+    padding-left: 2rem;
+    width: fit-content;
+  }
+
+&__title {
+      width: fit-content;
+    }
+
+}
+
+}
+
+
+
+
+
+
+
+
+@media (min-width: 576px) {
+  body {
+    background-color: lime;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: darkblue;
+  }
+}
