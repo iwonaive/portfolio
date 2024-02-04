@@ -19,9 +19,8 @@ body {
 
 .page {
   max-width: 1141px;
-  width: 100%;
+  width: calc(100% - 1rem);
   display: block;
-  padding: 0 0.5rem;
 }
 
 a,
@@ -37,10 +36,18 @@ a:focus {
   width: 100%;
   border-bottom: 0.5px solid v.$light-blue;
   display: flex;
-  margin-bottom: 9.5rem;
   justify-content: center;
   font-size: 0.75rem;
   line-height: 3.5rem;
+  margin-bottom: 4.5rem;
+
+  @include m.sm {
+    margin-bottom: 6.5rem;
+  }
+
+  @include m.md {
+    margin-bottom: 9.5rem;
+  }
 
   &__wrapper {
     max-width: 1141px;
@@ -49,8 +56,14 @@ a:focus {
     justify-content: flex-end;
 
     &__link {
-      padding: 0 1rem;
       cursor: pointer;
+      padding: 0 0.5rem;
+      font-size: 0.625rem;
+
+      @include m.sm {
+        padding: 0 1rem;
+        font-size: 0.75rem;
+      }
 
       &--blue {
         @include m.blue-text;
@@ -61,16 +74,32 @@ a:focus {
 }
 
 .main__container {
-  width: 44rem;
+  max-width: 44rem;
   padding-bottom: 2.5rem;
   font-family: v.$font-secondary;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  @include m.md {
+    justify-content: left;
+    text-align: left;
+  }
 
   &__heading {
     &--bright,
     &--dark {
-      font-size: 4rem;
-      width: 100%;
+      font-size: 2.5rem;
       line-height: normal;
+
+      @include m.sm {
+        font-size: 3rem;
+      }
+
+      @include m.md {
+        font-size: 4rem;
+      }
     }
 
     &--bright {
@@ -86,12 +115,16 @@ a:focus {
   }
 
   &__subheader {
-    width: 34.75rem;
+    max-width: 34.75rem;
     font-family: v.$font-secondary;
     line-height: 1.5rem;
     color: v.$white;
     margin: 1.25rem 0 4.5rem 0;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+
+    @include m.sm {
+      font-size: 1.25rem;
+    }
   }
 
   .main__container__btn {
@@ -112,16 +145,28 @@ a:focus {
   &__wrapper {
     display: flex;
     align-items: center;
+    gap: 6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include m.lg {
+      gap: 8rem;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
   }
 
   &__container {
     color: v.$white;
     font-size: 0.75rem;
     width: 40rem;
-    padding: 0 8rem 0 0;
     line-height: 1.5rem;
     display: inline-block;
-    font-size: 1.25rem;
+    font-size: 1rem;
+
+    @include m.md {
+      font-size: 1.25rem;
+    }
   }
 
   &__text--blue {
@@ -148,9 +193,17 @@ a:focus {
       width: 100%;
       display: flex;
       align-items: center;
-      font-size: 2rem;
-      padding-bottom: 6.5rem;
-      padding-top: 8.5rem;
+      font-size: 1.5rem;
+      padding: 5rem 0 3rem 0;
+
+      @include m.sm {
+        padding: 6.5rem 0 4.5rem 0;
+      }
+
+      @include m.md {
+        padding: 8.5rem 0 6.5rem 0;
+        font-size: 2rem;
+      }
 
       &::after {
         content: "";
@@ -183,8 +236,12 @@ a:focus {
     font-size: 0.75rem;
     max-width: 40rem;
     line-height: 1.25rem;
-    padding-left: 4.25rem;
     margin-bottom: 2.5rem;
+    padding-left: 3rem;
+
+    @include m.md {
+      padding-left: 4.25rem;
+    }
 
     &::before {
       content: "";
@@ -233,7 +290,7 @@ a:focus {
           border-left: 6px solid v.$light-blue;
           border-bottom: 2px solid transparent;
           position: absolute;
-          left: -16px;
+          left: -1rem;
           top: 0.5rem;
         }
       }
@@ -248,12 +305,18 @@ a:focus {
   &__container {
     display: flex;
     gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include m.lg {
+      flex-wrap: nowrap;
+    }
   }
 }
 
 .card {
-  width: 30%;
-  height: 25rem;
+  width: 100%;
+  height: 20rem;
   border-radius: 5px;
   background: v.$deep-blue;
   text-decoration: none;
@@ -265,6 +328,11 @@ a:focus {
   justify-content: space-between;
   padding: 1.5rem;
   align-items: flex-start;
+
+  @include m.sm {
+    width: 30%;
+    height: 25rem;
+  }
 
   &__icon-earth {
     padding: 0.75rem 0 0 0;
@@ -295,8 +363,12 @@ a:focus {
 
 .footer {
   margin: 13rem 0 7rem 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
+
+  @include m.md {
+    font-size: 2rem;
+  }
 
   &__container__content {
     padding: 4rem 0 4rem 0;

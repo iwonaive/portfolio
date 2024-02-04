@@ -78,9 +78,8 @@ body {
 
 .page {
   max-width: 1141px;
-  width: 100%;
+  width: calc(100% - 1rem);
   display: block;
-  padding: 0 0.5rem;
 }
 
 a,
@@ -96,10 +95,20 @@ a:focus {
   width: 100%;
   border-bottom: 0.5px solid rgb(100, 255, 218);
   display: flex;
-  margin-bottom: 9.5rem;
   justify-content: center;
   font-size: 0.75rem;
   line-height: 3.5rem;
+  margin-bottom: 4.5rem;
+}
+@media (min-width: 576px) {
+  .nav {
+    margin-bottom: 6.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav {
+    margin-bottom: 9.5rem;
+  }
 }
 .nav__wrapper {
   max-width: 1141px;
@@ -108,8 +117,15 @@ a:focus {
   justify-content: flex-end;
 }
 .nav__wrapper__link {
-  padding: 0 1rem;
   cursor: pointer;
+  padding: 0 0.5rem;
+  font-size: 0.625rem;
+}
+@media (min-width: 576px) {
+  .nav__wrapper__link {
+    padding: 0 1rem;
+    font-size: 0.75rem;
+  }
 }
 .nav__wrapper__link--blue {
   font-family: Fira Code;
@@ -118,14 +134,33 @@ a:focus {
 }
 
 .main__container {
-  width: 44rem;
+  max-width: 44rem;
   padding-bottom: 2.5rem;
   font-family: Fjalla One;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .main__container {
+    justify-content: left;
+    text-align: left;
+  }
 }
 .main__container__heading--bright, .main__container__heading--dark {
-  font-size: 4rem;
-  width: 100%;
+  font-size: 2.5rem;
   line-height: normal;
+}
+@media (min-width: 576px) {
+  .main__container__heading--bright, .main__container__heading--dark {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .main__container__heading--bright, .main__container__heading--dark {
+    font-size: 4rem;
+  }
 }
 .main__container__heading--bright {
   display: flex;
@@ -137,12 +172,17 @@ a:focus {
   color: rgb(136, 146, 192);
 }
 .main__container__subheader {
-  width: 34.75rem;
+  max-width: 34.75rem;
   font-family: Fjalla One;
   line-height: 1.5rem;
   color: rgb(255, 255, 255);
   margin: 1.25rem 0 4.5rem 0;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+}
+@media (min-width: 576px) {
+  .main__container__subheader {
+    font-size: 1.25rem;
+  }
 }
 .main__container .main__container__btn {
   font-size: 1rem;
@@ -168,15 +208,29 @@ a:focus {
 .about__wrapper {
   display: flex;
   align-items: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .about__wrapper {
+    gap: 8rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }
 .about__container {
   color: rgb(255, 255, 255);
   font-size: 0.75rem;
   width: 40rem;
-  padding: 0 8rem 0 0;
   line-height: 1.5rem;
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .about__container {
+    font-size: 1.25rem;
+  }
 }
 .about__text--blue {
   font-size: 3rem;
@@ -199,9 +253,19 @@ a:focus {
   width: 100%;
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  padding-bottom: 6.5rem;
-  padding-top: 8.5rem;
+  font-size: 1.5rem;
+  padding: 5rem 0 3rem 0;
+}
+@media (min-width: 576px) {
+  .section__heading__text {
+    padding: 6.5rem 0 4.5rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .section__heading__text {
+    padding: 8.5rem 0 6.5rem 0;
+    font-size: 2rem;
+  }
 }
 .section__heading__text::after {
   content: "";
@@ -231,8 +295,13 @@ a:focus {
   font-size: 0.75rem;
   max-width: 40rem;
   line-height: 1.25rem;
-  padding-left: 4.25rem;
   margin-bottom: 2.5rem;
+  padding-left: 3rem;
+}
+@media (min-width: 768px) {
+  .experience__container {
+    padding-left: 4.25rem;
+  }
 }
 .experience__container::before {
   content: "";
@@ -276,7 +345,7 @@ a:focus {
   border-left: 6px solid rgb(100, 255, 218);
   border-bottom: 2px solid transparent;
   position: absolute;
-  left: -16px;
+  left: -1rem;
   top: 0.5rem;
 }
 
@@ -287,11 +356,18 @@ a:focus {
 .projects__container {
   display: flex;
   gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .projects__container {
+    flex-wrap: nowrap;
+  }
 }
 
 .card {
-  width: 30%;
-  height: 25rem;
+  width: 100%;
+  height: 20rem;
   border-radius: 5px;
   background: rgb(17, 34, 64);
   text-decoration: none;
@@ -303,6 +379,12 @@ a:focus {
   justify-content: space-between;
   padding: 1.5rem;
   align-items: flex-start;
+}
+@media (min-width: 576px) {
+  .card {
+    width: 30%;
+    height: 25rem;
+  }
 }
 .card__icon-earth {
   padding: 0.75rem 0 0 0;
@@ -328,8 +410,13 @@ a:focus {
 
 .footer {
   margin: 13rem 0 7rem 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .footer {
+    font-size: 2rem;
+  }
 }
 .footer__container__content {
   padding: 4rem 0 4rem 0;
