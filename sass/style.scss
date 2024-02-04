@@ -88,6 +88,7 @@ a:focus {
   }
 
   &__heading {
+
     &--bright,
     &--dark {
       font-size: 2.5rem;
@@ -159,13 +160,17 @@ a:focus {
   &__container {
     color: v.$white;
     font-size: 0.75rem;
-    width: 40rem;
+    width: 100%;
     line-height: 1.5rem;
     display: inline-block;
     font-size: 1rem;
 
     @include m.md {
       font-size: 1.25rem;
+    }
+
+    @include m.lg {
+      width: 60%;
     }
   }
 
@@ -174,13 +179,14 @@ a:focus {
   }
 
   &__img {
-    width: 15rem;
-    height: fit-content;
-    display: inline-block;
-    margin-bottom: 7rem;
+    width: 60%;
     -webkit-box-shadow: 8px 8px 0px 0px v.$light-blue;
     -moz-box-shadow: 8px 8px 0px 0px v.$light-blue;
     box-shadow: 8px 8px 0px 0px v.$light-blue;
+
+    @include m.lg {
+      width: 40%;
+    }
   }
 }
 

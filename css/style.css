@@ -222,7 +222,7 @@ a:focus {
 .about__container {
   color: rgb(255, 255, 255);
   font-size: 0.75rem;
-  width: 40rem;
+  width: 100%;
   line-height: 1.5rem;
   display: inline-block;
   font-size: 1rem;
@@ -232,17 +232,24 @@ a:focus {
     font-size: 1.25rem;
   }
 }
+@media (min-width: 992px) {
+  .about__container {
+    width: 60%;
+  }
+}
 .about__text--blue {
   font-size: 3rem;
 }
 .about__img {
-  width: 15rem;
-  height: fit-content;
-  display: inline-block;
-  margin-bottom: 7rem;
+  width: 60%;
   -webkit-box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
   -moz-box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
   box-shadow: 8px 8px 0px 0px rgb(100, 255, 218);
+}
+@media (min-width: 992px) {
+  .about__img {
+    width: 40%;
+  }
 }
 
 .section__heading {
